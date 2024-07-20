@@ -39,9 +39,9 @@ int main(int argc, char **argv) {
           width, height, options.hardware_mapping);
 
   for (i = 0; i < 1000; ++i) {
-    for (y = 0; y < height; ++y) {
-      for (x = 0; x < width; ++x) {
-        led_canvas_set_pixel(offscreen_canvas, x, y+1, i & 0xff, 0x00, 0x00);
+    for (y = 0; y < height/2; ++y) {
+      for (x = 0; x < width/2; ++x) {
+        led_canvas_set_pixel(offscreen_canvas, x*2, y*2, i & 0xff, 0x00, 0x00);
       }
     }
 

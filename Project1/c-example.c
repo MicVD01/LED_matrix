@@ -31,19 +31,14 @@ int main(int argc, char **argv) {
    * buffer onto which we draw, which is then swapped on each refresh.
    * This is typically a good aproach for animations and such.
    */
-  offscreen_canvas = led_matrix_create_offscreen_canvas(matrix);
+  offscreen_canvas = led_matrix_create_offscreen_canvas(matrix); //always use offscreen_canvas as canvas!
 
   led_canvas_get_size(offscreen_canvas, &width, &height);
 
   fprintf(stderr, "Size: %dx%d. Hardware gpio mapping: %s\n",
           width, height, options.hardware_mapping);
 
-  for (i = 0; i < 1000; ++i) {
-    for (y = 0; y < height/2; ++y) {
-      for (x = 0; x < width/2; ++x) {
-        led_canvas_set_pixel(offscreen_canvas, x*2, y*2, 0x00, 0xff, 0x00);
-      }
-    }
+  led_canvas_fill(offscreen_canvas, 0x00,0x00, 0xff)
 
     /* Now, we swap the canvas. We give swap_on_vsync the buffer we
      * just have drawn into, and wait until the next vsync happens.

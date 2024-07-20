@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
 
   
 
-  while(0){
+  while(1){
     led_canvas_fill(offscreen_canvas, 0x00,0x00, 0xff);
 
     //END AFTER ALL EDITS OF CANVAS

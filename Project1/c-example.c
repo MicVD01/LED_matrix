@@ -3,7 +3,7 @@
  * Using the C-API of this library.
  *
  */
-#include "../rpi-rgb-led-matrix/include/led-matrix-c.h"
+#include "../rpi-rgb-led-matrix/include/led-matrix-c.cc"
 
 #include <stdio.h>
 #include <string.h>

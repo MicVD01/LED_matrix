@@ -1,5 +1,5 @@
-CFLAGS=-Wall -O3 -g -Wextra -Wno-unused-parameter
-CXXFLAGS=$(CFLAGS)
+#CFLAGS=-Wall -O3 -g -Wextra -Wno-unused-parameter
+#CXXFLAGS=$(CFLAGS)
 OBJECTS=c-example.o
 BINARIES=c-example
 

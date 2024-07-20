@@ -41,7 +41,12 @@ int main(int argc, char **argv) {
   
 
   while(1){
-    led_canvas_fill(offscreen_canvas, 0x00,0x00, 0xff);
+    int i = i++;
+    {
+      led_canvas_fill(offscreen_canvas, (0x00+i)%0xff, 0x00, 0xff);
+    }
+    
+    
 
     //END AFTER ALL EDITS OF CANVAS
 

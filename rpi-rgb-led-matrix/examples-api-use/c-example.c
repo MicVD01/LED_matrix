@@ -18,7 +18,9 @@ int main(int argc, char **argv) {
 
   memset(&options, 0, sizeof(options));
   options.rows = 32;
+  options.cols = 64;
   options.chain_length = 1;
+  options.hardware_mapping = "adafruit-hat";
 
   /* This supports all the led commandline options. Try --led-help */
   matrix = led_matrix_create_from_options(&options, &argc, &argv);

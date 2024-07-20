@@ -38,7 +38,7 @@ int main(int argc, char **argv) {
   fprintf(stderr, "Size: %dx%d. Hardware gpio mapping: %s\n",
           width, height, options.hardware_mapping);
 
-  led_canvas_fill(offscreen_canvas, 0x00,0x00, 0xff)
+  led_canvas_fill(offscreen_canvas, 0x00,0x00, 0xff);
 
     /* Now, we swap the canvas. We give swap_on_vsync the buffer we
      * just have drawn into, and wait until the next vsync happens.

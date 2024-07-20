@@ -38,19 +38,22 @@ int main(int argc, char **argv) {
   fprintf(stderr, "Size: %dx%d. Hardware gpio mapping: %s\n",
           width, height, options.hardware_mapping);
 
-  led_canvas_fill(offscreen_canvas, 0x00,0x00, 0xff);
+  
 
+  while(0){
+    led_canvas_fill(offscreen_canvas, 0x00,0x00, 0xff);
 
-  //END AFTER ALL EDITS OF CANVAS
+    //END AFTER ALL EDITS OF CANVAS
 
     /* Now, we swap the canvas. We give swap_on_vsync the buffer we
      * just have drawn into, and wait until the next vsync happens.
      * we get back the unused buffer to which we'll draw in the next
      * iteration.
      */
-  offscreen_canvas = led_matrix_swap_on_vsync(matrix, offscreen_canvas);
+    offscreen_canvas = led_matrix_swap_on_vsync(matrix, offscreen_canvas);
+  }
   
-
+  
   /*
    * Make sure to always call led_matrix_delete() in the end to reset the
    * display. Installing signal handlers for defined exit is a good idea.
